@@ -7,7 +7,7 @@ function App() {
     const [courses, setCourses] = useState([]);
 
     const loadCourses = async () => {
-        const res = await fetch('/api/courses');
+        const res = await fetch('/.netlify/functions/courses');
         const courses = await res.json();
         setCourses(courses);
     };
