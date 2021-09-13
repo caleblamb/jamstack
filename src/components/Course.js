@@ -5,7 +5,7 @@ export default function Course({ course, refreshCourses }) {
         try {
             await fetch('/.netlify/functions/courses', {
                 method: 'PUT',
-                body: JSON.stringify({... course, purchased: true}),
+                body: JSON.stringify({...course, purchased: true}),
             });
             refreshCourses();
 
