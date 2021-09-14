@@ -7,9 +7,13 @@ function App() {
     const [courses, setCourses] = useState([]);
 
     const loadCourses = async () => {
-        const res = await fetch('/.netlify/functions/courses');
-        const courses = await res.json();
-        setCourses(courses);
+        try {
+            const res = await fetch('/.netlify/functions/courses');
+            const courses = await res.json();
+            setCourses(courses);
+        } catch (error) {
+            console.error(error);
+        }
     };
 
     useEffect(() => {
