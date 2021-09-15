@@ -16,10 +16,12 @@ export default function CourseForm({ courseAdded }) {
     const submitCourse = async (e) => {
         e.preventDefault();
         try {
-            await fetch('/.netlify/functions/courses', {
+            await fetch('/api/courses', {
                 method: 'POST',
                 body: JSON.stringify({
-                    name, link, tags,
+                    name,
+                    link,
+                    tags,
                 }),
             });
             resetForm();
@@ -27,6 +29,7 @@ export default function CourseForm({ courseAdded }) {
         } catch (err) {
             console.error(err);
         }
+        console.log(name, link);
     };
 
     return (
@@ -58,6 +61,7 @@ export default function CourseForm({ courseAdded }) {
                         <p>Tags</p>
                         <Tags tagsUpdated={setTags} key={count} />
                     </div>
+
                     <button type="submit" className="btn btn-primary">
                         Submit
                     </button>
