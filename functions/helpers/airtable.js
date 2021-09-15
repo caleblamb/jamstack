@@ -1,8 +1,10 @@
-// require('dotenv').config();
-var Airtable = require('airtable');
-var base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
-    process.env.AIRTABLE_BASE_ID
-);
-const table = base(process.env.AIRTABLE_TABLE_NAME);
+const Airtable = require('airtable');
+
+Airtable.configure({
+    apiKey: 'keyjSkeH7g5vv2oHe',
+});
+
+const base = Airtable.base('appZMYz8cn1L7Li1s');
+const table = base.table('courses');
 
 module.exports = { table };
