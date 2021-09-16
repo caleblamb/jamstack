@@ -5,7 +5,7 @@ const deleteCourse = require('./helpers/deleteCourse');
 const updateCourse = require('./helpers/updateCourse');
 exports.handler = async (event) => {
     if (event.httpMethod === 'GET') {
-        return await getCourses(event);
+        return getCourses(event);
     } else if (event.httpMethod === 'POST') {
         return await createCourse(event);
     } else if (event.httpMethod === 'PUT') {
