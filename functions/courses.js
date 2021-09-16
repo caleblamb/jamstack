@@ -7,11 +7,11 @@ exports.handler = async (event) => {
     if (event.httpMethod === 'GET') {
         return getCourses(event);
     } else if (event.httpMethod === 'POST') {
-        return await createCourse(event);
+        return createCourse(event);
     } else if (event.httpMethod === 'PUT') {
-        return await updateCourse(event);
+        return updateCourse(event);
     } else if (event.httpMethod === 'DELETE') {
-        return await deleteCourse(event);
+        return deleteCourse(event);
     } else {
         return formattedReturn(405, {});
     }
