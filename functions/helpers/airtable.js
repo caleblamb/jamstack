@@ -1,3 +1,4 @@
+import LogRocket from 'logrocket';
 require('dotenv').config();
 const Airtable = require('airtable');
 const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
@@ -6,3 +7,4 @@ const base = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(
 const table = base(process.env.AIRTABLE_TABLE_NAME);
 
 module.exports = { table };
+LogRocket.init('zwdu1u/digital-labs');

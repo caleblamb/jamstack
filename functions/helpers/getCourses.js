@@ -1,3 +1,4 @@
+import LogRocket from 'logrocket';
 const { table } = require('./airtable');
 const formattedReturn = require('./formattedReturn');
 module.exports = async (event) => {
@@ -11,3 +12,4 @@ module.exports = async (event) => {
     console.log();
     return formattedReturn(200, formattedCourses);
 };
+LogRocket.init('zwdu1u/digital-labs');
