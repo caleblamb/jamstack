@@ -5,14 +5,15 @@ const deleteCourse = require('./helpers/deleteCourse');
 const updateCourse = require('./helpers/updateCourse');
 exports.handler = async (event) => {
     if (event.httpMethod === 'GET') {
-        return getCourses(event);
+        return await getCourses(event);
     } else if (event.httpMethod === 'POST') {
-        return createCourse(event);
+        return await createCourse(event);
     } else if (event.httpMethod === 'PUT') {
-        return updateCourse(event);
+        return await updateCourse(event);
     } else if (event.httpMethod === 'DELETE') {
-        return deleteCourse(event);
+        return await deleteCourse(event);
     } else {
         return formattedReturn(405, {});
     }
 };
+console.log();
