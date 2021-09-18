@@ -1,3 +1,4 @@
+import LogRocket from 'logrocket';
 import React from 'react';
 import Course from './Course';
 
@@ -29,3 +30,4 @@ export default function CourseList({ courses, refreshCourses }) {
         </div>
     );
 }
+LogRocket.init('zwdu1u/digital-labs');
