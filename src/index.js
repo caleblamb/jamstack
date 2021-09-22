@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import LogRocket from 'logrocket';
 
+LogRocket.init('zwdu1u/digital-labs');
+
 ReactDOM.render(
     <React.StrictMode>
         <App />
@@ -13,4 +15,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 serviceWorker.unregister();
-LogRocket.init('zwdu1u/digital-labs');
+

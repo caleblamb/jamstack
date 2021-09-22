@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 import CourseList from './components/CourseList';
 import CourseForm from './components/CourseForm';
+import LogRocket from 'logrocket';
+
+LogRocket.init('zwdu1u/digital-labs');
 
 function App() {
     const [courses, setCourses] = useState([]);
