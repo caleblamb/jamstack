@@ -1,4 +1,3 @@
-import LogRocket from 'logrocket';
 const formattedReturn = require('./helpers/formattedReturn');
 const getCourses = require('./helpers/getCourses');
 const createCourse = require('./helpers/createCourse');
@@ -17,4 +16,3 @@ exports.handler = async (event) => {
         return formattedReturn(405, {});
     }
 };
-LogRocket.init('zwdu1u/digital-labs');
